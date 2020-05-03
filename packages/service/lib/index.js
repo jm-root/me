@@ -14,7 +14,10 @@ module.exports = class extends Service {
 
     if (gateway) {
       require('./gateway')({ gateway })
-        .then(doc => { this.gateway = doc })
+        .then(doc => {
+          this.gateway = doc
+          this.emit('ready')
+        })
     }
   }
 }

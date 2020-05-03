@@ -1,7 +1,10 @@
 module.exports = class extends require('service') {
   constructor (opts = {}) {
     super(opts)
-    this.emit('ready')
+    this.onReady().then(() => {
+      const { gateway } = this
+      gateway.bind('user')
+    })
   }
 
   router (opts) {
