@@ -1,5 +1,7 @@
 module.exports = {
   modules: {
-    hello: {}
+    main: {
+      prefix: '/me'
+    }
   }
 }

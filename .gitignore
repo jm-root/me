@@ -7,3 +7,4 @@ yarn.lock
 development.js
 package-lock.json
 lerna-debug.log
+config/development.js
